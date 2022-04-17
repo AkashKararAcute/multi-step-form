@@ -1,0 +1,82 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MultiStep Form</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="index.js" defer></script>
+  </head>
+  <body>
+    <div id="app">
+      <form data-multi-step>
+        <div class="card" data-step="1">
+          <h3 class="step-title">Set up account</h3>
+          <div class="form-group">
+            <label for="email"
+              >Email
+              <input type="email" required name="email" id="email" />
+            </label>
+            <label for="username"
+              >Username
+              <input type="text" required name="u_name" id="u-name" />
+            </label>
+            <label for="password"
+              >Password
+              <input type="password" required name="s_code" id="s-code" />
+            </label>
+            <button
+              class="btn"
+              type="button"
+              data-next
+              style="margin-left: calc(65%)"
+            >
+              Next
+            </button>
+          </div>
+        </div>
+        <div class="card active" data-step="2">
+          <h3 class="step-title">Residential Details</h3>
+          <div class="form-group">
+            <label for="address"
+              >Address
+              <input type="address" required name="address" />
+            </label>
+            <label for="state"
+              >State
+              <input type="text" required name="State" />
+            </label>
+            <label for="pincode"
+              >Pincode
+              <input type="number" required name="pincode" />
+            </label>
+          </div>
+          <div class="btn-group">
+            <button class="btn" type="button" data-previous>Previous</button>
+            <button class="btn" type="button" data-next>Next</button>
+          </div>
+        </div>
+        <div class="card" data-step="3">
+          <h3 class="step-title">Personal Details</h3>
+          <div class="form-group">
+            <label for="f_name">
+              First Name
+              <input type="text" required name="f_name" />
+            </label>
+            <label for="l_name">
+              Last Name
+              <input type="text" required name="l_name" />
+            </label>
+          </div>
+          <div class="btn-group">
+            <button class="btn" type="button" data-previous>Previous</button>
+            <button class="btn" type="submit">Submit</button>
+          </div>
+        </div>
+      </form>
+    </div>
+  </body>
+</html>
+<!-- why use defer in script?
+    So the script always load after the html so everything works correctly
+   -->
